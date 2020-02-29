@@ -22,10 +22,7 @@ def fibonacci(n):
     21
     34
     """
-    a = 0
-    b = 1
+    a, b = 0, 1
     for i in range(n):
         yield a
-        future = a + b
-        a = b
-        b = future
+        a, b = b, a + b
